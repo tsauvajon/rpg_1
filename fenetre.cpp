@@ -140,10 +140,7 @@ FenetrePrincipale::FenetrePrincipale()
 
 void FenetrePrincipale::attaquer()
 {
-    textEdit.clear();
-    textEdit += "Infos de la partie\n\n";
-    textEdit += "Vous venez d'attaquer !\n";
-    textEdit += "C'est au tour de l'ennemi...\n";
+    fenetre.majText("attaquer")
     infos->setText(textEdit);
     menuActions->setEnabled(false);
     hero->attaquer(enemi);
@@ -219,10 +216,7 @@ void FenetrePrincipale::attaquer()
 void FenetrePrincipale::regenerer()
 
 {
-    textEdit.clear();
-    textEdit += "Infos de la partie\n\n";
-    textEdit += "Vous vous soignez !\n";
-    textEdit += "C'est au tour de l'ennemi...\n";
+    fenetre.majText("soigner")
     infos->setText(textEdit);
     menuActions->setEnabled(false);
     hero->seRegenerer(40, maxVie);
@@ -252,10 +246,7 @@ void FenetrePrincipale::attaquerEpee()
 
 {
 
-    textEdit.clear();
-    textEdit += "Infos de la partie\n\n";
-    textEdit += "Vous venez d'attaquer avec un coup d'épée!\n";
-    textEdit += "C'est au tour de l'ennemi...\n";
+    fenetre.majText("attaquer")
     infos->setText(textEdit);
     menuActions->setEnabled(false);
     hero->attaquer(enemi);
@@ -300,10 +291,7 @@ void FenetrePrincipale::attaquerEpee()
 void FenetrePrincipale::soinsUltimes()
 {
 
-    textEdit.clear();
-    textEdit += "Infos de la partie\n\n";
-    textEdit += "Vous vous soignez !\n";
-    textEdit += "C'est au tour de l'ennemi...\n";
+    fenetre.majText("soins ultimes")
     infos->setText(textEdit);
     menuActions->setEnabled(false);
     hero->seRegenerer(70, maxVie);
@@ -319,5 +307,13 @@ void FenetrePrincipale::soinsUltimes()
     menuActions->setEnabled(true);
     infos->setText(textEdit);
 
+}
+
+void FenetrePrincipale::majText(QString typeAction)
+{
+    textEdit.clear();
+    textEdit += "Infos de la partie\n\n";
+    textEdit += "Vous venez de faire l'action "+typeAction+"!\n";
+    textEdit += "C'est au tour de l'ennemi...\n";
 }
 

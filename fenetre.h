@@ -21,6 +21,7 @@ public :
     FenetrePrincipale();
     ~FenetrePrincipale();
     void setDegatsEnemi(int dgts);
+    void majText(QString typeAction);
 
 private slots:
     void attaquer();
@@ -60,6 +61,7 @@ private:
 
 
 };
+
 
 
 #endif // FENETRE_H
