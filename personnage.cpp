@@ -37,15 +37,6 @@ void Personnage::recevoirDegats(int dgts)
     }
 }
 
-void Personnage::seRegenerer(int vie,int maxVie)
-{
-    m_vie += vie;
-    if(m_vie > maxVie)
-    {
-        m_vie = maxVie;
-    }
-}
-
 int Personnage::viePersonnage()
 {
     return m_vie;
