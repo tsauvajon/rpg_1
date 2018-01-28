@@ -8,7 +8,6 @@
 #include <windows.h>
 #include <QBrush>
 #include <QProgressBar>
-#include <QFrame>
 #include <QGridLayout>
 #include <QColorDialog>
 #include <QHBoxLayout>

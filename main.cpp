@@ -1,7 +1,6 @@
 #include <QApplication>
 #include "fenetre.h"
 #include "personnage.h"
-#include <iostream>
 
 
 
