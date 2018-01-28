@@ -3,6 +3,8 @@
 
 #include <QString>
 
+// modif à la con
+
 class Arme
 {
 public:
